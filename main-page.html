@@ -14,12 +14,376 @@
                 <li>
                     <img src="images/hermez.png" alt="Header" height="100" width=auto>
                 </li>
+                <li class="header-container">
+                    <div class="header">
+                        <div>SUV</div>
+                        <div>Sedan</div>
+                        <div>Hatchback</div>
+                        <div>Wagon</div>
+                        <div>Van</div>
+                        <div>Crossover</div>
+                        <div>Coupe</div>
+                        <div>Convertible</div>
+                        <div>Pickups</div>
+                    </div>
+                </li>
             </ul>
         </nav>
             <div class="main-box">
-                <div class="form-box">
-                    FORM
-                </div>
+                <div class="form-box">              
+                    <div class="slider-group">
+                        <label for="year">Model Year: <span id="year_val">2000</span></label><br>
+                        <input type="range" id="year" min="2000" max="2017" value="2000"
+                               oninput="year_val.innerText = this.value">
+                      </div>
+                      
+                      <div class="slider-group">
+                        <label for="price_usd">Price (USD): <span id="price_usd_val">5035</span></label><br>
+                        <input type="range" id="price_usd" min="5035" max="495000" value="5035"
+                               oninput="price_usd_val.innerText = this.value">
+                      </div>
+                      
+                      <div class="slider-group">
+                        <label for="horsepower">Horsepower: <span id="horsepower_val">5</span></label><br>
+                        <input type="range" id="horsepower" min="5" max="731" value="5"
+                               oninput="horsepower_val.innerText = this.value">
+                      </div>
+                      
+                      <div class="slider-group">
+                        <label for="airbags">Airbags: <span id="airbags_val">2</span></label><br>
+                        <input type="range" id="airbags" min="2" max="12" value="2"
+                               oninput="airbags_val.innerText = this.value">
+                      </div>
+                      <div class="input-group">
+                        <label>Heated seats availability</label>
+                        <div class="options">
+                            <label><input type="checkbox" name="heated_seats" value="no"> No</label>
+                            <label><input type="checkbox" name="heated_seats" value="front_rear"> Yes (Front + Rear)</label>
+                            <label><input type="checkbox" name="heated_seats" value="front_only"> Yes (Front Only)</label>
+                        </div>
+                    </div>
+                    
+                      
+                      <div class="slider-group">
+                        <label for="cylinders">Cylinders: <span id="cylinders_val">4</span></label><br>
+                        <input type="range" id="cylinders" min="4" max="8" value="4"
+                               oninput="cylinders_val.innerText = this.value">
+                      </div>
+                      
+                      <div class="slider-group">
+                        <label for="displacement">Displacement (cc): <span id="displacement_val">72</span></label><br>
+                        <input type="range" id="displacement" min="72" max="5998" value="72"
+                               oninput="displacement_val.innerText = this.value">
+                      </div>
+                      
+                      <div class="slider-group">
+                        <label for="torque">Torque (Nm): <span id="torque_val">6</span></label><br>
+                        <input type="range" id="torque" min="6" max="950" value="6"
+                               oninput="torque_val.innerText = this.value">
+                      </div>
+                      
+                      <div class="slider-group">
+                        <label for="fuel_tank">Fuel Tank (L): <span id="fuel_tank_val">55</span></label><br>
+                        <input type="range" id="fuel_tank" min="55" max="75" value="55"
+                               oninput="fuel_tank_val.innerText = this.value">
+                      </div>
+                      
+                      <div class="slider-group">
+                        <label for="wheel_size">Wheel Size (in): <span id="wheel_size_val">15</span></label><br>
+                        <input type="range" id="wheel_size" min="15" max="18" value="15"
+                               oninput="wheel_size_val.innerText = this.value">
+                      </div>
+                      
+                      <div class="slider-group">
+                        <label for="brake_dist">Braking Distance (m): <span id="brake_dist_val">33.1</span></label><br>
+                        <input type="range" id="brake_dist" min="33.1" max="38" step="0.1" value="33.1"
+                               oninput="brake_dist_val.innerText = this.value">
+                      </div>
+                      <div class="slider-group">
+                        <label for="steering_ratio">Steering Ratio: <span id="steering_ratio_val">14.5</span></label><br>
+                        <input type="range" id="steering_ratio" min="14.5" max="15.5" step="0.1" value="14.5"
+                               oninput="steering_ratio_val.innerText = this.value">
+                      </div>
+                      
+                      <div class="slider-group">
+                        <label for="wheelbase">Wheelbase (mm): <span id="wheelbase_val">2400</span></label><br>
+                        <input type="range" id="wheelbase" min="2400" max="2700" value="2400"
+                               oninput="wheelbase_val.innerText = this.value">
+                      </div>
+                      
+                      <div class="slider-group">
+                        <label for="ground_clearance">Ground Clearance (mm): <span id="ground_clearance_val">150</span></label><br>
+                        <input type="range" id="ground_clearance" min="150" max="220" value="150"
+                               oninput="ground_clearance_val.innerText = this.value">
+                      </div>
+                      <div class="input-group">
+                        <label>Heated seats availability</label>
+                        <div class="options">
+                            <label><input type="checkbox" name="heated_seats" value="no"> No</label>
+                            <label><input type="checkbox" name="heated_seats" value="front_rear"> Yes (Front + Rear)</label>
+                            <label><input type="checkbox" name="heated_seats" value="front_only"> Yes (Front Only)</label>
+                        </div>
+                    </div>
+                      
+                      <div class="slider-group">
+                        <label for="turning_radius">Turning Radius (m): <span id="turning_radius_val">3.6</span></label><br>
+                        <input type="range" id="turning_radius" min="3.6" max="4.1" step="0.1" value="3.6"
+                               oninput="turning_radius_val.innerText = this.value">
+                      </div>
+                      
+                      <div class="slider-group">
+                        <label for="curb_weight">Curb Weight (kg): <span id="curb_weight_val">1500</span></label><br>
+                        <input type="range" id="curb_weight" min="1500" max="2500" value="1500"
+                               oninput="curb_weight_val.innerText = this.value">
+                      </div>
+                      <div class="input-group">
+                        <label>Rear suspension</label>
+                        <div class="options">
+                            <label><input type="checkbox" name="suspension_rear"> Independent</label>
+                            <label><input type="checkbox" name="suspension_rear"> Leaf Spring</label>
+                            <label><input type="checkbox" name="suspension_rear"> Multi-link</label>
+                            <label><input type="checkbox" name="suspension_rear"> Torsion Beam</label>
+                        </div>
+                    </div>      
+                      <div class="slider-group">
+                        <label for="gvwr">GVWR (kg): <span id="gvwr_val">2100</span></label><br>
+                        <input type="range" id="gvwr" min="2100" max="3500" value="2100"
+                               oninput="gvwr_val.innerText = this.value">
+                      </div>
+                      
+                      <div class="slider-group">
+                        <label for="towing_capacity">Max Towing Capacity (kg): <span id="towing_capacity_val">1500</span></label><br>
+                        <input type="range" id="towing_capacity" min="1500" max="3500" value="1500"
+                               oninput="towing_capacity_val.innerText = this.value">
+                      </div>
+                      
+                      <div class="slider-group">
+                        <label for="cargo_capacity">Max Cargo Capacity (L): <span id="cargo_capacity_val">500</span></label><br>
+                        <input type="range" id="cargo_capacity" min="500" max="1500" value="500"
+                               oninput="cargo_capacity_val.innerText = this.value">
+                      </div>
+                      <div class="input-group">
+                        <label>Brake assist type</label>
+                        <div class="options">
+                            <label><input type="checkbox" name="brake_assist_system"> ABS</label>
+                            <label><input type="checkbox" name="brake_assist_system"> ABS + EBD</label>
+                            <label><input type="checkbox" name="brake_assist_system"> ABS + EBD + Brake Assist</label>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Front suspension</label>
+                        <div class="options">
+                            <label><input type="checkbox" name="suspension_front"> Independent</label>
+                            <label><input type="checkbox" name="suspension_front"> Independent Double Wishbone</label>
+                            <label><input type="checkbox" name="suspension_front"> MacPherson Strut</label>
+                        </div>
+                    </div>
+                      
+                      <div class="slider-group">
+                        <label for="acceleration">0–60 mph Acceleration (s): <span id="acceleration_val">7.1</span></label><br>
+                        <input type="range" id="acceleration" min="7.1" max="12.0" step="0.1" value="7.1"
+                               oninput="acceleration_val.innerText = this.value">
+                      </div>
+                      
+                      <div class="slider-group">
+                        <label for="top_speed">Top Speed (km/h): <span id="top_speed_val">152</span></label><br>
+                        <input type="range" id="top_speed" min="152" max="516" value="152"
+                               oninput="top_speed_val.innerText = this.value">
+                      </div>
+                      
+                      
+                      <div class="slider-group">
+                        <label for="highway_mpg">EPA Highway MPG: <span id="highway_mpg_val">11.5</span></label><br>
+                        <input type="range" id="highway_mpg" min="11.5" max="34.3" step="0.1" value="11.5"
+                               oninput="highway_mpg_val.innerText = this.value">
+                      </div>
+                      
+                      <div class="input-group">
+                        <label>Seating layout</label>
+                        <div class="options">
+                            <label><input type="checkbox" name="seating_layout" value="2"> 2 Seats (2 Front Seats)</label>
+                            <label><input type="checkbox" name="seating_layout" value="5"> 5 Seats (2 Front + 3 Rear)</label>
+                            <label><input type="checkbox" name="seating_layout" value="7"> 7 Seats (2 Front + 3 Middle + 2 Rear)</label>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="input-group">
+                        <label>Fuel type</label>
+                        <div class="options">
+                            <label><input type="radio" name="fuel_type" value="diesel"> Diesel</label>
+                            <label><input type="radio" name="fuel_type" value="gasoline"> Gasoline</label>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Engine aspiration</label>
+                        <div class="options">
+                            <label><input type="radio" name="aspiration" value="na"> Naturally Aspirated</label>
+                            <label><input type="radio" name="aspiration" value="turbo"> Turbocharged</label>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="input-group">
+                        <label>ABS availability</label>
+                        <div class="options">
+                            <label><input type="radio" name="abs" value="maybe"> Maybe</label>
+                            <label><input type="radio" name="abs" value="yes"> Yes</label>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Steering type</label>
+                        <div class="options">
+                            <label><input type="radio" name="steering" value="eps"> Electric Power Steering</label>
+                            <label><input type="radio" name="steering" value="hps"> Hydraulic Power Steering</label>
+                        </div>
+                    </div>
+                    <div class="slider-group">
+                        <label for="city_mpg">EPA City MPG: <span id="city_mpg_val">8.5</span></label><br>
+                        <input type="range" id="city_mpg" min="8.5" max="25.3" step="0.1" value="8.5"
+                               oninput="city_mpg_val.innerText = this.value">
+                      </div>
+                      
+                      <div class="slider-group">
+                        <label for="combined_mpg">EPA Combined MPG: <span id="combined_mpg_val">10.0</span></label><br>
+                        <input type="range" id="combined_mpg" min="10.0" max="29.8" step="0.1" value="10.0"
+                               oninput="combined_mpg_val.innerText = this.value">
+                      </div>
+                    <div class="input-group">
+                        <label>Material of seats</label>
+                        <div class="options">
+                            <label><input type="checkbox" name="seat_material"> Fabric</label>
+                            <label><input type="checkbox" name="seat_material"> Leather / Fabric Mix</label>
+                            <label><input type="checkbox" name="seat_material"> Premium Leather</label>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Seat adjustment type</label>
+                        <div class="options">
+                            <label><input type="checkbox" name="seat_adjustments"> Manual Adjustable</label>
+                            <label><input type="checkbox" name="seat_adjustments"> Power Adjustable (6-way)</label>
+                            <label><input type="checkbox" name="seat_adjustments"> Power Adjustable (8-way) with Memory</label>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Price category</label>
+                        <div class="options">
+                            <label><input type="checkbox" name="price_segment"> Budget</label>
+                            <label><input type="checkbox" name="price_segment"> Luxury</label>
+                            <label><input type="checkbox" name="price_segment"> Mid-Range</label>
+                            <label><input type="checkbox" name="price_segment"> Premium</label>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Performance level</label>
+                        <div class="options">
+                            <label><input type="checkbox" name="performance_tier"> Economy</label>
+                            <label><input type="checkbox" name="performance_tier"> High-Performance</label>
+                            <label><input type="checkbox" name="performance_tier"> Performance</label>
+                            <label><input type="checkbox" name="performance_tier"> Standard</label>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Engine layout</label>
+                        <div class="options">
+                            <label><input type="checkbox" name="engine_configuration"> I4</label>
+                            <label><input type="checkbox" name="engine_configuration"> V6</label>
+                            <label><input type="checkbox" name="engine_configuration"> V8</label>
+                        </div>
+                    </div>
+                    <div class="slider-group">
+                        <label for="co2">CO₂ Emissions (g/km): <span id="co2_val">8</span></label><br>
+                        <input type="range" id="co2" min="8" max="24" value="8"
+                               oninput="co2_val.innerText = this.value">
+                      </div>
+                      
+                      <div class="slider-group">
+                        <label for="pwr_weight">Power-to-Weight Ratio: <span id="pwr_weight_val">7.5</span></label><br>
+                        <input type="range" id="pwr_weight" min="7.5" max="1096.5" step="0.1" value="7.5"
+                               oninput="pwr_weight_val.innerText = this.value">
+                      </div>
+                      
+                      <div class="slider-group">
+                        <label for="fuel_eff">Fuel Efficiency Estimate: <span id="fuel_eff_val">-5</span></label><br>
+                        <input type="range" id="fuel_eff" min="-5.0" max="25.0" step="0.1" value="-5"
+                               oninput="fuel_eff_val.innerText = this.value">
+                      </div>
+                    
+                    <div class="input-group">
+                        <label>Detailed transmission</label>
+                        <div class="options">
+                            <label><input type="checkbox" name="transmission_detailed"> 4-speed Manual</label>
+                            <label><input type="checkbox" name="transmission_detailed"> 5-speed Automatic</label>
+                            <label><input type="checkbox" name="transmission_detailed"> 6-speed Automatic</label>
+                            <label><input type="checkbox" name="transmission_detailed"> 8-speed Automatic</label>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Front tire size</label>
+                        <div class="options">
+                            <label><input type="checkbox" name="tyre_size_front"> 195/60R15</label>
+                            <label><input type="checkbox" name="tyre_size_front"> 205/65R16</label>
+                            <label><input type="checkbox" name="tyre_size_front"> 205/70R15</label>
+                            <label><input type="checkbox" name="tyre_size_front"> 225/50R18</label>
+                            <label><input type="checkbox" name="tyre_size_front"> 235/70R17</label>
+                            <label><input type="checkbox" name="tyre_size_front"> 265/75R16</label>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Rear tire size</label>
+                        <div class="options">
+                            <label><input type="checkbox" name="tyre_size_rear"> 195/60R15</label>
+                            <label><input type="checkbox" name="tyre_size_rear"> 205/65R16</label>
+                            <label><input type="checkbox" name="tyre_size_rear"> 205/70R15</label>
+                            <label><input type="checkbox" name="tyre_size_rear"> 225/50R18</label>
+                            <label><input type="checkbox" name="tyre_size_rear"> 235/70R17</label>
+                            <label><input type="checkbox" name="tyre_size_rear"> 265/75R16</label>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label>Transmission type</label>
+                        <div class="options">
+                            <label><input type="radio" name="transmission_type" value="auto"> Automatic</label>
+                            <label><input type="radio" name="transmission_type" value="manual"> Manual</label>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Drive type</label>
+                        <div class="options">
+                            <label><input type="radio" name="drive_type" value="awd"> All-Wheel Drive</label>
+                            <label><input type="radio" name="drive_type" value="fwd"> Front-Wheel Drive</label>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Front brakes</label>
+                        <div class="options">
+                            <label><input type="radio" name="front_brakes" value="disc"> Disc Brake</label>
+                            <label><input type="radio" name="front_brakes" value="ventilated"> Ventilated Disc</label>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Rear brakes</label>
+                        <div class="options">
+                            <label><input type="checkbox" name="brakes_rear"> Disc Brake</label>
+                            <label><input type="checkbox" name="brakes_rear"> Drum Brake</label>
+                            <label><input type="checkbox" name="brakes_rear"> Solid Disc</label>
+                            <label><input type="checkbox" name="brakes_rear"> Ventilated Disc</label>
+                        </div>
+                    </div>
+                                  
+                </div>                
                 <div class="content-box">
                     CONTENT
                 </div>
